@@ -15,13 +15,13 @@ function letSearch(num) {
     let answ = '';
     let intОfNum = num;
     let RemOfNum;
-        do {
-            if(Math.trunc(intОfNum) > 0){
+    do {
+        if (Math.trunc(intОfNum) > 0) {
             RemOfNum = Math.trunc((intОfNum - 1) % engLetter.length);
             intОfNum = Math.trunc((intОfNum - 1) / engLetter.length);
             answ = answ + engLetter.toString().charAt(RemOfNum);
         }
-        } while (Math.trunc(intОfNum) > 0);
+    } while (Math.trunc(intОfNum) > 0);
     return answ;
 }
 function main() {
