@@ -15,17 +15,11 @@ function letterSearch(num) {
     let answ = '';
     let intОfNum = num;
     let remainderOfNum;
-    let i = 0;
     do {
             remainderOfNum = (intОfNum - 1) % engLetter.length;
             intОfNum = Math.trunc((intОfNum - 1) / engLetter.length);
-            answ = answ + engLetter.toString().charAt(remainderOfNum);
-            i++;
+            answ = engLetter.toString().charAt(remainderOfNum) + answ;
     } while (intОfNum > 0);
-    let tempLetterMas = Array.from(i);
-    tempLetterMas = answ.split('');
-    tempLetterMas = tempLetterMas.reverse()
-    answ = tempLetterMas.join('');
     return answ;
 }
 function main() {
